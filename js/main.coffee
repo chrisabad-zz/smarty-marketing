@@ -13,10 +13,12 @@ $(document).ready ->
     data = $(this).serializeArray()
     email = data[0].value
 
-    # Send data
-    properties =
-      email: email
+    if email.length > 0
+      # Send data
+      properties =
+        email: email
 
-    analytics.identify email, properties
+      analytics.track 'Signup', properties
+      analytics.identify email, properties
 
     false
