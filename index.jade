@@ -4,7 +4,7 @@ main
       .content.col12
         h1#logo Smarty
         p.
-          We love learning about new things,
+          We love learning new things,
           don&rsquo;t you? What if you could learn anything
           faster, with less effort, and remember it
           for a very long time? Using the latest
@@ -15,9 +15,13 @@ main
         section#signup
           p
             strong Sign up for early access.
-          form
-            input(placeholder="Enter your email address" type="text")
+          form(method="POST" action="/" id="signup-form")
+            input(placeholder="Enter your email address" type="text" name="email" autofocus)
             button Submit
+
+        section#thank-you
+          p
+            strong Thanks! We&rsquo;ll be reaching back out to you soon.
 
 footer
   p Handcrafted with care, by the Smarty team.
