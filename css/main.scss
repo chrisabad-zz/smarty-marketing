@@ -70,7 +70,6 @@ input {
   font-size: 1em;
   margin: 0;
   padding: 8px 15px;
-  width: 286px;
 }
 
 p {
@@ -105,7 +104,7 @@ footer {
   background-position: center;
   background-repeat: no-repeat;
   height: 76px;
-  margin: 0 0 10px 0;
+  margin: 0;
   padding: 0;
   position: relative;
   text-indent: -5000px;
@@ -130,10 +129,10 @@ main {
 // LAYOUT < 720  //
 ///////////////////
 
-$total_width: 380px;
+$total_width: 280px;
 $container_margin: auto;
 $gutter_width: 20px;
-$max_width: 380px;
+$max_width: 280px;
 
 article{
   width: $total_width;
@@ -145,6 +144,10 @@ article{
   background-position: center bottom;
   padding-bottom: 325px;
 }
+
+input { width: 200px; }
+
+#logo { margin-bottom: 25px; }
 
 main { padding: 25px 0 100px 0; }
 
@@ -177,6 +180,10 @@ main { padding: 25px 0 100px 0; }
     max-width: $max_width;
   }
 
+  input { width: 280px; }
+
+  #logo { margin-bottom: 10px; }
+
   main { padding: 130px 0 200px 0; }
 
 }
@@ -207,6 +214,10 @@ main { padding: 25px 0 100px 0; }
   }
 
   .content { @include column(5); }
+
+  input { width: 280px; }
+
+  #logo { margin-bottom: 10px; }
 
   main { padding: 130px 0 200px 0; }
 
