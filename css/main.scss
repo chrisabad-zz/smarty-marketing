@@ -44,9 +44,10 @@ body {
 
 button {
   background-color: #1695A4;
-  background-image: url("/images/arrow.png");
+  background-image: url("/images/arrow@2x.png");
   background-position: center;
   background-repeat: no-repeat;
+  background-size: 22px 10px;
   border: 0;
   border-radius: 0 3px 3px 0;
   cursor: pointer;
@@ -57,7 +58,7 @@ button {
   text-indent: -5000px;
   width: 50px;
 
-  @include image-2x("/images/arrow@2x.png", 22px, 10px);
+  // @include image-2x("/images/arrow@2x.png", 22px, 10px);
 }
 
 html {
@@ -93,21 +94,23 @@ footer {
   padding-bottom: 35px;
 
   p {
-    background-image: url("/images/icon.png");
+    background-image: url("/images/icon@2x.png");
     background-position: top center;
     background-repeat: no-repeat;
+    background-size: 72px 72px;
     margin: -36px 0 0 0;
     padding: 96px 0 0 0;
     position: relative;
 
-    @include image-2x("/images/icon@2x.png", 72px, 72px);
+    // @include image-2x("/images/icon@2x.png", 72px, 72px);
   }
 }
 
 #logo {
-  background-image: url("/images/logo.png");
+  background-image: url("/images/logo@2x.png");
   background-position: center;
   background-repeat: no-repeat;
+  background-size: 220px 76px;
   height: 76px;
   margin: 0;
   padding: 0;
@@ -115,7 +118,7 @@ footer {
   text-indent: -5000px;
   width: 220px;
 
-  @include image-2x("/images/logo@2x.png", 220px, 76px);
+  // @include image-2x("/images/logo@2x.png", 220px, 76px);
 }
 
 main {
@@ -147,11 +150,12 @@ article{
 }
 
 .container {
-  background-image: url("/images/illustration-trimmed.png");
+  background-image: url("/images/illustration-trimmed@2x.png");
   background-position: center bottom;
+  background-size: 702px 303px;
   padding-bottom: 325px;
 
-  @include image-2x("/images/illustration-trimmed@2x.png", 702px, 303px);
+  // @include image-2x("/images/illustration-trimmed@2x.png", 702px, 303px);
 }
 
 input { width: 190px; }
@@ -175,11 +179,12 @@ main { padding: 25px 0 100px 0; }
 	@include generate_helper_classes();
 
   .container {
-    background-image: url('/images/illustration.png');
+    background-image: url('/images/illustration@2x.png');
     background-position: -170px center;
+    background-size: 1330px 303px;
     padding-bottom: 0;
 
-    @include image-2x("/images/illustration@2x.png", 1330px, 303px);
+    // @include image-2x("/images/illustration@2x.png", 1330px, 303px);
   }
 
   .content {
@@ -219,11 +224,12 @@ main { padding: 25px 0 100px 0; }
   }
 
   .container {
-    background-image: url('/images/illustration.png');
+    background-image: url('/images/illustration@2x.png');
     background-position: center;
+    background-size: 1330px 303px;
     padding-bottom: 0;
 
-    @include image-2x("/images/illustration@2x.png", 1330px, 303px);
+    // @include image-2x("/images/illustration@2x.png", 1330px, 303px);
   }
 
   .content { @include column(5); }
