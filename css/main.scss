@@ -4,6 +4,7 @@
 
 @import "font-face";
 @import "grid";
+@import "retina";
 
 
 // //////////////////////
@@ -55,6 +56,8 @@ button {
   position: relative;
   text-indent: -5000px;
   width: 50px;
+
+  @include image-2x("/images/arrow@2x.png", 22px, 10px);
 }
 
 html {
@@ -87,7 +90,7 @@ p {
 footer {
   color: $secondary-text;
   font-size: 1.4em;
-  margin-bottom: 35px;
+  padding-bottom: 35px;
 
   p {
     background-image: url("/images/icon.png");
@@ -96,6 +99,8 @@ footer {
     margin: -36px 0 0 0;
     padding: 96px 0 0 0;
     position: relative;
+
+    @include image-2x("/images/icon@2x.png", 72px, 72px);
   }
 }
 
@@ -109,6 +114,8 @@ footer {
   position: relative;
   text-indent: -5000px;
   width: 220px;
+
+  @include image-2x("/images/logo@2x.png", 220px, 76px);
 }
 
 main {
@@ -129,10 +136,10 @@ main {
 // LAYOUT < 720  //
 ///////////////////
 
-$total_width: 280px;
+$total_width: 270px;
 $container_margin: auto;
 $gutter_width: 20px;
-$max_width: 280px;
+$max_width: 270px;
 
 article{
   width: $total_width;
@@ -143,9 +150,11 @@ article{
   background-image: url("/images/illustration-trimmed.png");
   background-position: center bottom;
   padding-bottom: 325px;
+
+  @include image-2x("/images/illustration-trimmed@2x.png", 702px, 303px);
 }
 
-input { width: 200px; }
+input { width: 190px; }
 
 #logo { margin-bottom: 25px; }
 
@@ -169,6 +178,8 @@ main { padding: 25px 0 100px 0; }
     background-image: url('/images/illustration.png');
     background-position: -170px center;
     padding-bottom: 0;
+
+    @include image-2x("/images/illustration@2x.png", 1330px, 303px);
   }
 
   .content {
@@ -211,6 +222,8 @@ main { padding: 25px 0 100px 0; }
     background-image: url('/images/illustration.png');
     background-position: center;
     padding-bottom: 0;
+
+    @include image-2x("/images/illustration@2x.png", 1330px, 303px);
   }
 
   .content { @include column(5); }
