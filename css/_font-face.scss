@@ -1,0 +1,34 @@
+/* Droid Fonts (http://code.google.com/android)
+  Copyright (c) 2005-2008, The Android Open Source Project
+  Licensed under the Apache License, Version 2.0 */
+
+@mixin font-face($name, $url, $weight: false, $style: false) {
+  @font-face {
+    font-family: $name;
+    src: url($url);
+    @if $weight { font-weight: $weight }
+    @if $style { font-style: $style }
+    }
+  }
+
+@include font-face("'Droid Sans'", "'droid/DroidSans.ttf'");
+@include font-face("'Droid Sans'", "'droid/DroidSans-Bold.ttf'", "bold");
+
+@mixin droid-sans-font { font-family: 'Droid Sans', 'Helvetica Neue', Helvetica, sans-serif; }
+
+@include font-face("'Droid Serif'", "'droid/DroidSerif-Regular.ttf'");
+@include font-face("'Droid Serif'", "'droid/DroidSerif-Italic.ttf'", false, "italic");
+@include font-face("'Droid Serif'", "'droid/DroidSerif-Bold.ttf'", "bold");
+@include font-face("'Droid Serif'", "'droid/DroidSerif-BoldItalic.ttf'", "bold", "italic");
+
+@mixin droid-serif-font { font-family: 'Droid Serif', Georgia, Times, serif; }
+
+@include font-face("'Droid Sans Mono'", "'droid/DroidSansMono.ttf'");
+
+@mixin droid-mono-font { font-family: 'Droid Sans Mono', 'Lucida Console', Monaco, monospace; }
+
+@mixin sans-serif-font { @include droid-sans-font; }
+
+@mixin serif-font { @include droid-serif-font; }
+
+@mixin monospace-font { @include droid-mono-font; }

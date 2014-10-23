@@ -1,0 +1,213 @@
+// //////////////////////
+// MIXINS
+// //////////////////////
+
+@import "font-face";
+@import "grid";
+
+
+// //////////////////////
+// CONFIG
+// //////////////////////
+
+$total_width: 940px;
+$container_margin: auto;
+$gutter_width: 20px;
+
+$primary-text: #FFFFFF;
+$secondary-text: #C5E4E8;
+$light-background: #17B6C5;
+$dark-background: #1695A4;
+
+$max_width: 940px;
+
+
+// //////////////////////
+// ELEMENT STYLES
+// //////////////////////
+
+article{
+	margin: 0 auto;
+  @include clearfix();
+}
+
+body {
+  background-color: $dark-background;
+  @include sans-serif-font;
+  color: $primary-text;
+  margin: 0;
+  min-height: 100%;
+  padding: 0;
+  text-align: center;
+}
+
+button {
+  background-color: #1695A4;
+  background-image: url("/images/arrow.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 0;
+  border-radius: 0 3px 3px 0;
+  cursor: pointer;
+  font-size: 1em;
+  margin: 0;
+  padding: 8px 0;
+  position: relative;
+  text-indent: -5000px;
+  width: 50px;
+}
+
+html {
+  height: 100%;
+  font-size: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+input {
+  border: 0;
+  border-radius: 3px 0 0 3px;
+  font-size: 1em;
+  margin: 0;
+  padding: 8px 15px;
+  width: 286px;
+}
+
+p {
+  line-height: 1.5em;
+  margin: 0 0 1em 0;
+  padding: 0;
+}
+
+// Layout & Display
+.container {
+  background-repeat: no-repeat;
+  padding: 0 25px;
+}
+
+footer {
+  color: $secondary-text;
+  font-size: 1.4em;
+  margin-bottom: 35px;
+
+  p {
+    background-image: url("/images/icon.png");
+    background-position: top center;
+    background-repeat: no-repeat;
+    margin: -36px 0 0 0;
+    padding: 96px 0 0 0;
+    position: relative;
+  }
+}
+
+#logo {
+  background-image: url("/images/logo.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 76px;
+  margin: 0 0 10px 0;
+  padding: 0;
+  position: relative;
+  text-indent: -5000px;
+  width: 220px;
+}
+
+main {
+  background-color: $light-background;
+  background-repeat: no-repeat;
+}
+
+.content {
+  font-size: 1.6em;
+  margin: 0 auto;
+  text-align: left;
+  }
+
+#signup p { margin-bottom: .5em; }
+
+
+///////////////////
+// LAYOUT < 720  //
+///////////////////
+
+$total_width: 380px;
+$container_margin: auto;
+$gutter_width: 20px;
+$max_width: 380px;
+
+article{
+  width: $total_width;
+  max-width: $max_width;
+}
+
+.container {
+  background-image: url("/images/illustration-trimmed.png");
+  background-position: center bottom;
+  padding-bottom: 325px;
+}
+
+main { padding: 25px 0 100px 0; }
+
+///////////////////
+// LAYOUT > 720  //
+///////////////////
+
+@media screen and (min-width: 720px) {
+
+  $total_width: 100%;
+  $container_margin: auto;
+  $gutter_width: 1%;
+
+  $max_width: 100%;
+
+	@include generate_helper_classes();
+
+  .container {
+    background-image: url('/images/illustration.png');
+    background-position: -170px center;
+    padding-bottom: 0;
+  }
+
+  .content {
+    width: 380px;
+  }
+
+  article{
+    width: $total_width;
+    max-width: $max_width;
+  }
+
+  main { padding: 130px 0 200px 0; }
+
+}
+
+
+///////////////////
+// LAYOUT > 960  //
+///////////////////
+
+@media screen and (min-width: 990px) {
+
+	$total_width: 940px;
+	$container_margin: auto;
+	$gutter_width: 20px;
+  $max_width: 940px;
+
+	@include generate_helper_classes();
+
+  article{
+    width: $total_width;
+    max-width: $max_width;
+  }
+
+  .container {
+    background-image: url('/images/illustration.png');
+    background-position: center;
+    padding-bottom: 0;
+  }
+
+  .content { @include column(5); }
+
+  main { padding: 130px 0 200px 0; }
+
+}
