@@ -57,7 +57,7 @@ button {
   text-indent: -5000px;
   width: 50px;
 
-  @include image-2x("test.png", 22px, 10px);
+  @include image-2x("/images/arrow@2x.png", 22px, 10px);
 }
 
 html {
